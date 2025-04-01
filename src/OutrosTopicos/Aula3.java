@@ -4,16 +4,30 @@ import java.util.Scanner;
 
 public class Aula3 {
     public static void main(String[] args) {
-
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digte 4 palavras");
-        String texto = leitura.nextLine();
+        System.out.println("Digite três numeros");
+        int x = leitura.nextInt();
+        int y = leitura.nextInt();
+        int z = leitura.nextInt();
 
-        String[] vect = texto.split(" ");
+        int maior = max(x, y, z);
 
-        System.out.println(vect[0]);
-        System.out.println(vect[1]);
-        System.out.println(vect[2]);
-        System.out.println(vect[3]);
+        showResult(maior);
+    }
+
+    public static int max(int a, int b, int c) {
+        int aux;
+        if (a > b && a > c) {
+            aux = a;
+        } else if (b > c) {
+            aux = b;
+        } else {
+            aux = c;
+        }
+        return aux;
+    }
+
+    public static void showResult(int value) {
+        System.out.println("Maior: " + value);
     }
 }

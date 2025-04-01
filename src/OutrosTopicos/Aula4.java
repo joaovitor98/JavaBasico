@@ -2,7 +2,7 @@ package OutrosTopicos;
 
 import java.util.Scanner;
 
-public class Aula6 {
+public class Aula4 {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
         System.out.println("Digite o numero de inicio");
